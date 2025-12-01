@@ -24,8 +24,16 @@
         console.log('Klavyeden QR tarama başlatıldı! Uygulama yükleniyor...');
         alert('QR tarama için uygulamayı başlatın');
       };
-      // GitHub Pages base path
-      window.__BASE_PATH__ = import.meta.env.BASE_URL || '/';
+      // GitHub Pages base path - detect from current path
+      (function() {
+        const path = window.location.pathname;
+        const match = path.match(/^\/([^\/]+)\//);
+        if (match && match[1] !== 'assets' && match[1] !== 'static') {
+          window.__BASE_PATH__ = '/' + match[1] + '/';
+        } else {
+          window.__BASE_PATH__ = '/';
+        }
+      })();
     </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
