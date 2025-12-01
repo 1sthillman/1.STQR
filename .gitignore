@@ -55,4 +55,20 @@ android/app/build/
 android/build/
 android/.gradle/
 android/local.properties
+android/**/*.lock
+android/**/*.bin
+android/**/*.properties
+android/**/gc.properties
+
+# IDE files
+.idea/
+.vscode/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build info files
+*.tsbuildinfo
 
