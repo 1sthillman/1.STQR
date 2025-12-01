@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#DD1F2937"
+    android:padding="16dp"
+    android:elevation="12dp">
+    
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🔥 SMART BOOKER"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+        
+        <Button
+            android:id="@+id/btn_minimize_booker"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="─"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#DD6B7280"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_close_booker"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="✕"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#DDEF4444" />
+    </LinearLayout>
+    
+    <!-- STATUS -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⏸ DURDURULDU"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#EF4444"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="#22FFFFFF"
+        android:layout_marginBottom="12dp" />
+    
+    <!-- STATISTICS -->
+    <TextView
+        android:id="@+id/tv_stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tarama: 0 | Alev: 0 | Rezervasyon: 0"
+        android:textSize="11sp"
+        android:textColor="#9CA3AF"
+        android:gravity="center"
+        android:layout_marginBottom="12dp" />
+    
+    <!-- CONTROLS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        
+        <Button
+            android:id="@+id/btn_start_booker"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="▶ BAŞLAT"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DD10B981"
+            android:layout_marginRight="8dp" />
+        
+        <Button
+            android:id="@+id/btn_stop_booker"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="■ DURDUR"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DDEF4444" />
+    </LinearLayout>
+    
+    <!-- SETUP -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ayarlar"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:textColor="#9CA3AF"
+        android:paddingBottom="6dp" />
+    
+    <Button
+        android:id="@+id/btn_set_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="📍 YENİLE BUTONU KONUMU AYARLA"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="#DD6366F1"
+        android:layout_marginBottom="8dp" />
+    
+    <!-- INFO -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ℹ️ Sistem otomatik olarak alevli saatleri tarayacak ve en erken saati rezerve edecektir."
+        android:textSize="10sp"
+        android:textColor="#9CA3AF"
+        android:lineSpacingMultiplier="1.2" />
+    
+</LinearLayout>
+

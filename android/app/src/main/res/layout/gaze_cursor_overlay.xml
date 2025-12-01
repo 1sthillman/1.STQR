@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false">
+
+    <!-- 👁️ GÖZ CURSOR - KIRMIZI NOKTA (ÇOK NET) -->
+    <View
+        android:id="@+id/gaze_cursor"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/gaze_cursor_dot"
+        android:elevation="999dp"
+        android:alpha="1.0" />
+
+    <!-- 📊 İSTATİSTİKLER (Üst-Sol) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/stats_background">
+        
+        <TextView
+            android:id="@+id/gaze_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FPS: 0 | Kırpma: 0"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2" />
+    </LinearLayout>
+
+    <!-- 🔙 KAFA DURUMU (Üst-Sağ) -->
+    <TextView
+        android:id="@+id/head_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:text="Kafa: Normal"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:background="@drawable/stats_background"
+        android:visibility="visible"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2" />
+
+    <!-- 📱 KENAR GÖSTERGELERİ -->
+    <!-- Üst -->
+    <View
+        android:id="@+id/edge_indicator_top"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="top"
+        android:background="#4400FF00"
+        android:visibility="invisible" />
+    
+    <!-- Alt -->
+    <View
+        android:id="@+id/edge_indicator_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:background="#4400FF00"
+        android:visibility="invisible" />
+    
+    <!-- Sol -->
+    <View
+        android:id="@+id/edge_indicator_left"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#4400FF00"
+        android:visibility="invisible" />
+    
+    <!-- Sağ -->
+    <View
+        android:id="@+id/edge_indicator_right"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="#4400FF00"
+        android:visibility="invisible" />
+
+</FrameLayout>
+

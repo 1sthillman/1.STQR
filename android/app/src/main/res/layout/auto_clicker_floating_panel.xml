@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/panel_bg"
+    android:padding="0dp"
+    android:elevation="12dp">
+    
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/panel_header_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⚡ Auto Clicker"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:letterSpacing="0.02" />
+        
+        <ImageView
+            android:id="@+id/btn_emergency_stop"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_emergency_bg"
+            android:layout_marginRight="6dp"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_stop" />
+        
+        <ImageView
+            android:id="@+id/btn_minimize"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_minimize_bg"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_minimize" />
+    </LinearLayout>
+    
+    <!-- BODY -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+        
+        <!-- MAIN CONTROLS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            
+            <LinearLayout
+                android:id="@+id/btn_start"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/btn_start_bg"
+                android:elevation="3dp"
+                android:layout_marginRight="8dp">
+                
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_play"
+                    android:layout_marginRight="6dp" />
+                
+                <TextView
+                    android:text="BAŞLAT"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/btn_stop"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/btn_stop_bg"
+                android:elevation="3dp">
+                
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_stop_square"
+                    android:layout_marginRight="6dp" />
+                
+                <TextView
+                    android:text="DURDUR"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <!-- ACTIONS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eylemler"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#9CA3AF"
+            android:letterSpacing="0.1"
+            android:paddingBottom="6dp"
+            android:paddingLeft="2dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            
+            <LinearLayout
+                android:id="@+id/btn_add_point"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_action_1"
+                android:layout_marginRight="4dp">
+                
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_tap"
+                    android:layout_marginBottom="2dp" />
+                
+                <TextView
+                    android:text="TIK"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/btn_add_double_tap"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_action_2"
+                android:layout_marginRight="4dp">
+                
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_double_tap"
+                    android:layout_marginBottom="2dp" />
+                
+                <TextView
+                    android:text="ÇİFT"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/btn_add_long_press"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_action_3"
+                android:layout_marginRight="4dp">
+                
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_long_press"
+                    android:layout_marginBottom="2dp" />
+                
+                <TextView
+                    android:text="UZUN"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/btn_add_swipe"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_action_4"
+                android:layout_marginRight="4dp">
+                
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_swipe"
+                    android:layout_marginBottom="2dp" />
+                
+                <TextView
+                    android:text="KAYDIR"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/btn_add_pinch"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_action_5">
+                
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_zoom"
+                    android:layout_marginBottom="2dp" />
+                
+                <TextView
+                    android:text="ZOOM"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <!-- EDIT CONTROLS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            
+            <LinearLayout
+                android:id="@+id/btn_edit_points"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.2"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/btn_edit_bg"
+                android:layout_marginRight="4dp">
+                
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="4dp" />
+                
+                <TextView
+                    android:text="DÜZENLE"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+            
+            <ImageView
+                android:id="@+id/btn_undo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_undo_bg"
+                android:src="@drawable/ic_undo"
+                android:padding="10dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="centerInside" />
+            
+            <ImageView
+                android:id="@+id/btn_redo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_redo_bg"
+                android:src="@drawable/ic_redo"
+                android:padding="10dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="centerInside" />
+            
+            <ImageView
+                android:id="@+id/btn_clear_points"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_clear_bg"
+                android:src="@drawable/ic_delete"
+                android:padding="10dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="centerInside" />
+            
+            <ImageView
+                android:id="@+id/btn_toggle_points"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_eye_bg"
+                android:src="@drawable/ic_eye"
+                android:padding="10dp"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+        
+        <!-- SETTINGS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ayarlar"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#9CA3AF"
+            android:letterSpacing="0.1"
+            android:paddingBottom="6dp"
+            android:paddingLeft="2dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Aralık"
+                android:textColor="#E5E7EB"
+                android:textSize="11sp" />
+            
+            <TextView
+                android:id="@+id/tv_interval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500ms"
+                android:textColor="#10B981"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+        </LinearLayout>
+        
+        <SeekBar
+            android:id="@+id/seekbar_interval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="9500"
+            android:progress="0"
+            android:layout_marginBottom="8dp"
+            android:progressTint="#10B981"
+            android:thumbTint="#10B981" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tekrar"
+                android:textColor="#E5E7EB"
+                android:textSize="11sp" />
+            
+            <TextView
+                android:id="@+id/tv_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sonsuz"
+                android:textColor="#10B981"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+        </LinearLayout>
+        
+        <SeekBar
+            android:id="@+id/seekbar_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#10B981"
+            android:thumbTint="#10B981" />
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="9.09%p"
+    android:keyHeight="56dp"
+    android:horizontalGap="1dp"
+    android:verticalGap="4dp">
+
+    <!-- Row 1: Numbers (long press for symbols) -->
+    <Row>
+        <Key android:codes="49" android:keyLabel="1" />
+        <Key android:codes="50" android:keyLabel="2" />
+        <Key android:codes="51" android:keyLabel="3" />
+        <Key android:codes="52" android:keyLabel="4" />
+        <Key android:codes="53" android:keyLabel="5" />
+        <Key android:codes="54" android:keyLabel="6" />
+        <Key android:codes="55" android:keyLabel="7" />
+        <Key android:codes="56" android:keyLabel="8" />
+        <Key android:codes="57" android:keyLabel="9" />
+        <Key android:codes="48" android:keyLabel="0" />
+        <Key
+            android:codes="-5"
+            android:keyLabel="⌫"
+            android:isRepeatable="true"
+            android:keyWidth="18.18%p" />
+    </Row>
+
+    <!-- Row 2: Q W E R T Y U I O P Ğ Ü -->
+    <Row>
+        <Key android:codes="113" android:keyLabel="q" />
+        <Key android:codes="119" android:keyLabel="w" />
+        <Key android:codes="101" android:keyLabel="e" />
+        <Key android:codes="114" android:keyLabel="r" />
+        <Key android:codes="116" android:keyLabel="t" />
+        <Key android:codes="121" android:keyLabel="y" />
+        <Key android:codes="117" android:keyLabel="u" />
+        <Key android:codes="305" android:keyLabel="ı" />
+        <Key android:codes="111" android:keyLabel="o" />
+        <Key android:codes="112" android:keyLabel="p" />
+        <Key android:codes="287" android:keyLabel="ğ" />
+        <Key android:codes="252" android:keyLabel="ü" />
+    </Row>
+
+    <!-- Row 3: A S D F G H J K L Ş İ -->
+    <Row android:keyWidth="9.09%p">
+        <Key android:codes="97" android:keyLabel="a" />
+        <Key android:codes="115" android:keyLabel="s" />
+        <Key android:codes="100" android:keyLabel="d" />
+        <Key android:codes="102" android:keyLabel="f" />
+        <Key android:codes="103" android:keyLabel="g" />
+        <Key android:codes="104" android:keyLabel="h" />
+        <Key android:codes="106" android:keyLabel="j" />
+        <Key android:codes="107" android:keyLabel="k" />
+        <Key android:codes="108" android:keyLabel="l" />
+        <Key android:codes="351" android:keyLabel="ş" />
+        <Key android:codes="105" android:keyLabel="i" />
+    </Row>
+
+    <!-- Row 4: Shift Z X C V B N M Ö Ç . -->
+    <Row>
+        <Key
+            android:codes="-1"
+            android:isModifier="true"
+            android:keyLabel="⇧"
+            android:keyWidth="13.5%p" />
+        <Key android:codes="122" android:keyLabel="z" android:keyWidth="8%p" />
+        <Key android:codes="120" android:keyLabel="x" android:keyWidth="8%p" />
+        <Key android:codes="99" android:keyLabel="c" android:keyWidth="8%p" />
+        <Key android:codes="118" android:keyLabel="v" android:keyWidth="8%p" />
+        <Key android:codes="98" android:keyLabel="b" android:keyWidth="8%p" />
+        <Key android:codes="110" android:keyLabel="n" android:keyWidth="8%p" />
+        <Key android:codes="109" android:keyLabel="m" android:keyWidth="8%p" />
+        <Key android:codes="246" android:keyLabel="ö" android:keyWidth="8%p" />
+        <Key android:codes="231" android:keyLabel="ç" android:keyWidth="8%p" />
+        <Key android:codes="46" android:keyLabel="." android:keyWidth="8%p" />
+        <Key android:codes="44" android:keyLabel="," android:keyWidth="8%p" />
+    </Row>
+
+    <!-- Row 5: Features + Space + Enter -->
+    <Row>
+        <!-- Camera QR -->
+        <Key
+            android:codes="-200"
+            android:keyLabel="📷"
+            android:keyWidth="12%p" />
+        
+        <!-- Emoji -->
+        <Key
+            android:codes="-202"
+            android:keyLabel="😊"
+            android:keyWidth="12%p" />
+        
+        <!-- Voice -->
+        <Key
+            android:codes="-207"
+            android:keyLabel="🎤"
+            android:keyWidth="12%p" />
+        
+        <!-- Space -->
+        <Key
+            android:codes="32"
+            android:keyLabel="boşluk"
+            android:keyWidth="28%p" />
+        
+        <!-- Language Switch -->
+        <Key
+            android:codes="-101"
+            android:keyLabel="🌐"
+            android:keyWidth="12%p" />
+        
+        <!-- @ symbol -->
+        <Key
+            android:codes="64"
+            android:keyLabel="@"
+            android:keyWidth="12%p" />
+        
+        <!-- Enter -->
+        <Key
+            android:codes="-4"
+            android:keyLabel="↵"
+            android:keyWidth="12%p" />
+    </Row>
+</Keyboard>

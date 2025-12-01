@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:clipToPadding="false"
+        android:clipToOutline="false"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="18dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardUseCompatPadding="true">
+    
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/floating_panel_bg"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:id="@+id/header_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@drawable/floating_header_bg"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+    <ImageView
+        android:id="@+id/drag_handle"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/floating_chip_bg"
+                    android:padding="10dp"
+                    android:tint="#A855F7"
+                    android:src="@drawable/ic_drag_indicator"
+        android:contentDescription="Taşı" />
+    
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+
+                    <TextView
+                        android:id="@+id/header_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Floating Tarayıcı"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/header_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canlı QR · Barkod tarama"
+                        android:textColor="#D1D5DB"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+    <ImageView
+                    android:id="@+id/close_button"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/floating_chip_bg"
+                    android:padding="10dp"
+                    android:tint="#F87171"
+                    android:src="@drawable/ic_close"
+                    android:contentDescription="Kapat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/last_result_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@drawable/floating_chip_bg"
+                android:alpha="0.92"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintTop_toBottomOf="@id/header_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+                    android:id="@+id/last_result_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+                    android:text="Son Tarama"
+                    android:textColor="#A78BFA"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/last_result_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Henüz tarama yapılmadı"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+                    android:fontFamily="monospace"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/last_result_meta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+                    android:text="⏳ Bekleniyor"
+                    android:textColor="#D1D5DB"
+                    android:textSize="12sp"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/preview_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/last_result_container"
+                app:layout_constraintBottom_toTopOf="@id/control_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:scaleType="fillCenter" />
+
+            <LinearLayout
+                android:id="@+id/control_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/floating_footer_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+                    android:background="@drawable/floating_chip_bg"
+                    android:padding="8dp"
+                    android:layout_marginEnd="12dp">
+        
+        <ImageView
+            android:id="@+id/flash_button"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:padding="8dp"
+                        android:tint="#FBBF24"
+                        android:src="@drawable/ic_flash"
+            android:contentDescription="Flash" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/floating_chip_bg"
+                    android:padding="8dp">
+        
+        <ImageView
+                        android:id="@+id/history_icon"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:padding="8dp"
+                        android:tint="#60A5FA"
+                        android:src="@drawable/ic_history"
+                        android:contentDescription="Geçmiş"
+                        android:visibility="gone" />
+                </LinearLayout>
+    </LinearLayout>
+
+            <ImageView
+                android:id="@+id/resize_handle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/floating_chip_bg"
+                android:padding="8dp"
+                android:tint="#34D399"
+                android:src="@drawable/ic_resize"
+                android:contentDescription="Boyutlandır"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="4dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

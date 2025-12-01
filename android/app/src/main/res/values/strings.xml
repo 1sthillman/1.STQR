@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">1STQR</string>
+    <string name="title_activity_main">1STQR</string>
+    <string name="package_name">com.stqr.app</string>
+    <string name="custom_url_scheme">com.stqr.app</string>
+    <string name="accessibility_service_description">1STQR Floating QR Scanner - QR kod okununca aktif input alanına direkt yazar (WhatsApp, Notlar, vs.)</string>
+    <string name="ocr_accessibility_description">1STQR OCR - Taradığı metinleri doğrudan diğer uygulamalara yapıştırır. Gizli verilere erişim yoktur.</string>
+    <string name="auto_clicker_accessibility_description">1STQR Auto Clicker - Otomatik tıklama ve kaydırma işlemleri yapar. Sistem genelinde çalışır.</string>
+    <string name="keyboard_turkish_q_name">1STQR Türkçe Q Klavye</string>
+</resources>

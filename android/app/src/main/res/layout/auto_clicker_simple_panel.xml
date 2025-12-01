@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#DD1F2937"
+    android:padding="16dp">
+    
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⚡ Auto Clicker"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+        
+        <Button
+            android:id="@+id/btn_emergency_stop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="⏸"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="#DDEF4444"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_minimize"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="─"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#DD6B7280" />
+    </LinearLayout>
+    
+    <!-- MAIN CONTROLS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="▶ BAŞLAT"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DD10B981"
+            android:layout_marginRight="8dp" />
+        
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="■ DURDUR"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DDEF4444" />
+    </LinearLayout>
+    
+    <!-- ACTIONS -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eylemler"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:textColor="#9CA3AF"
+        android:paddingBottom="6dp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        
+        <Button
+            android:id="@+id/btn_add_point"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="TIK"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DD10B981"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_add_double_tap"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="ÇİFT"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DD14B8A6"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_add_long_press"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="UZUN"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DD8B5CF6"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_add_swipe"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="KAYDIR"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DD06B6D4"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_add_pinch"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="ZOOM"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DDF59E0B" />
+    </LinearLayout>
+    
+    <!-- EDIT CONTROLS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        
+        <Button
+            android:id="@+id/btn_edit_points"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="✏ DÜZENLE"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#DD6366F1"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_undo"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.6"
+            android:text="⬅"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:background="#DD6B7280"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_redo"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.6"
+            android:text="➡"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:background="#DD6B7280"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_clear_points"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.8"
+            android:text="🗑"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:background="#DDEF4444"
+            android:layout_marginRight="4dp" />
+        
+        <Button
+            android:id="@+id/btn_toggle_points"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.6"
+            android:text="👁"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:background="#DD8B5CF6" />
+    </LinearLayout>
+    
+    <!-- SETTINGS -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ayarlar"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:textColor="#9CA3AF"
+        android:paddingBottom="6dp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Aralık"
+            android:textColor="#E5E7EB"
+            android:textSize="11sp" />
+        
+        <TextView
+            android:id="@+id/tv_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500ms"
+            android:textColor="#10B981"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+    </LinearLayout>
+    
+    <SeekBar
+        android:id="@+id/seekbar_interval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="9500"
+        android:progress="0"
+        android:layout_marginBottom="8dp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tekrar"
+            android:textColor="#E5E7EB"
+            android:textSize="11sp" />
+        
+        <TextView
+            android:id="@+id/tv_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sonsuz"
+            android:textColor="#10B981"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+    </LinearLayout>
+    
+    <SeekBar
+        android:id="@+id/seekbar_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0" />
+    
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

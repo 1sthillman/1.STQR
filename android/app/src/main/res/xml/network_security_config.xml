@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+    
+    <!-- Wikipedia için özel izin -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">wikipedia.org</domain>
+        <domain includeSubdomains="true">tr.wikipedia.org</domain>
+    </domain-config>
+</network-security-config>
+
+
+
+
+
+

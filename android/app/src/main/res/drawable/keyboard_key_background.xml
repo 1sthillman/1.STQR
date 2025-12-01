@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Pressed State - Modern Gradient -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- Shadow -->
+            <item android:top="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#20000000" />
+                    <corners android:radius="12dp" />
+                </shape>
+            </item>
+            <!-- Main Button -->
+            <item android:bottom="2dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="135"
+                        android:startColor="#6B7280"
+                        android:endColor="#4B5563"
+                        android:type="linear" />
+                    <corners android:radius="12dp" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="#374151" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    
+    <!-- Normal State - Modern Gradient with Depth -->
+    <item>
+        <layer-list>
+            <!-- Shadow (Bottom Layer) -->
+            <item android:top="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#30000000" />
+                    <corners android:radius="12dp" />
+                </shape>
+            </item>
+            <!-- Main Button (Top Layer) -->
+            <item android:bottom="2dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="135"
+                        android:startColor="#4B5563"
+                        android:centerColor="#374151"
+                        android:endColor="#1F2937"
+                        android:type="linear" />
+                    <corners android:radius="12dp" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="#6B7280" />
+                </shape>
+            </item>
+            <!-- Highlight (Inner Glow) -->
+            <item
+                android:bottom="2dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:top="1dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#20FFFFFF"
+                        android:centerColor="#00FFFFFF"
+                        android:endColor="#00FFFFFF"
+                        android:type="linear" />
+                    <corners android:radius="11dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

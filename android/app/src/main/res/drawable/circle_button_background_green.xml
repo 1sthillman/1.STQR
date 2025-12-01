@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow -->
+    <item android:top="3dp">
+        <shape android:shape="oval">
+            <solid android:color="#40000000" />
+            <size android:width="64dp" android:height="64dp" />
+        </shape>
+    </item>
+    <!-- Main Button -->
+    <item android:bottom="3dp">
+        <shape android:shape="oval">
+            <gradient
+                android:angle="135"
+                android:startColor="#10B981"
+                android:centerColor="#059669"
+                android:endColor="#047857"
+                android:type="linear" />
+            <size android:width="64dp" android:height="64dp" />
+            <stroke
+                android:width="2dp"
+                android:color="#34D399" />
+        </shape>
+    </item>
+    <!-- Inner Highlight -->
+    <item
+        android:bottom="5dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp">
+        <shape android:shape="oval">
+            <gradient
+                android:angle="270"
+                android:startColor="#40FFFFFF"
+                android:centerColor="#00FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

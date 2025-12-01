@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logcat*.txt
+hs_err_pid*.txt
+gaze_debug.txt
+full_crash.txt
+
+# Debug files
+*.debug
+debug.keystore
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Media files (large)
+*.mp4
+*.mp3
+*.jpg
+*.png
+*.webp
+!icons/*.webp
+!resources/**/*.png
+
+# Source code backups
+*-complete-source-*.txt
+
+# Android build
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+

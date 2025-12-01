@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="380dp"
+    android:layout_height="600dp"
+    android:background="#DD1F2937"
+    android:elevation="12dp"
+    android:scrollbars="vertical">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🎯 SMART BOOKER PRO"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+            
+            <Button
+                android:id="@+id/btn_minimize_advanced"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="─"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="#DD6B7280"
+                android:layout_marginRight="4dp" />
+            
+            <Button
+                android:id="@+id/btn_close_advanced"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="✕"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="#DDEF4444" />
+        </LinearLayout>
+        
+        <!-- TAB SELECTOR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+            
+            <Button
+                android:id="@+id/tab_detector"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="🔍 Tara"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:background="#DD6366F1"
+                android:layout_marginRight="4dp" />
+            
+            <Button
+                android:id="@+id/tab_strategy"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="🎯 Strateji"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:background="#DD374151"
+                android:layout_marginRight="4dp" />
+            
+            <Button
+                android:id="@+id/tab_settings"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="⚙️ Ayarlar"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:background="#DD374151" />
+        </LinearLayout>
+        
+        <!-- ════════════════════════════════════════════════════════════ -->
+        <!-- TAB 1: DETECTOR - Ekran Tarama -->
+        <!-- ════════════════════════════════════════════════════════════ -->
+        
+        <LinearLayout
+            android:id="@+id/panel_detector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔍 EKRAN TARAYICI"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#10B981"
+                android:paddingBottom="8dp" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ekranı tarayın ve tüm elemanları görün. Hangi elemanlarla çalışmak istediğinizi seçebilirsiniz."
+                android:textSize="11sp"
+                android:textColor="#9CA3AF"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingBottom="12dp" />
+            
+            <Button
+                android:id="@+id/btn_scan_screen"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🔍 EKRANI TARA"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#DD10B981"
+                android:layout_marginBottom="12dp" />
+            
+            <!-- SCAN RESULTS -->
+            <TextView
+                android:id="@+id/tv_scan_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tarama yapılmadı"
+                android:textSize="11sp"
+                android:textColor="#9CA3AF"
+                android:gravity="center"
+                android:padding="8dp"
+                android:background="#22FFFFFF"
+                android:layout_marginBottom="12dp" />
+            
+            <!-- DETECTED ELEMENTS LIST -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bulunan Elemanlar:"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:paddingBottom="6dp" />
+            
+            <ListView
+                android:id="@+id/list_detected_elements"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#22FFFFFF"
+                android:divider="#33FFFFFF"
+                android:dividerHeight="1dp" />
+            
+        </LinearLayout>
+        
+        <!-- ════════════════════════════════════════════════════════════ -->
+        <!-- TAB 2: STRATEGY - Strateji Seçimi -->
+        <!-- ════════════════════════════════════════════════════════════ -->
+        
+        <LinearLayout
+            android:id="@+id/panel_strategy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎯 STRATEJİ SEÇİMİ"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#10B981"
+                android:paddingBottom="8dp" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hazır stratejilerden birini seçin veya kendiniz özelleştirin."
+                android:textSize="11sp"
+                android:textColor="#9CA3AF"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingBottom="12dp" />
+            
+            <!-- STRATEGY OPTIONS -->
+            <Button
+                android:id="@+id/btn_strategy_aggressive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔥 Agresif Mod\nEn hızlı şekilde 7 slot yakala"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:background="#DDEF4444"
+                android:padding="12dp"
+                android:gravity="left"
+                android:layout_marginBottom="8dp" />
+            
+            <Button
+                android:id="@+id/btn_strategy_balanced"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚖️ Dengeli Mod\nGüvenli ve dengeli rezervasyon"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:background="#DD10B981"
+                android:padding="12dp"
+                android:gravity="left"
+                android:layout_marginBottom="8dp" />
+            
+            <Button
+                android:id="@+id/btn_strategy_selective"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎯 Seçici Mod\nSadece belirli saatleri seç"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:background="#DD6366F1"
+                android:padding="12dp"
+                android:gravity="left"
+                android:layout_marginBottom="8dp" />
+            
+            <Button
+                android:id="@+id/btn_strategy_custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔧 Özel Strateji\nKendi algoritmanızı oluşturun"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:background="#DDF59E0B"
+                android:padding="12dp"
+                android:gravity="left"
+                android:layout_marginBottom="8dp" />
+            
+            <!-- CURRENT STRATEGY -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aktif Strateji:"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:paddingTop="8dp"
+                android:paddingBottom="6dp" />
+            
+            <TextView
+                android:id="@+id/tv_current_strategy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚖️ Dengeli Mod"
+                android:textSize="13sp"
+                android:textColor="#10B981"
+                android:padding="12dp"
+                android:background="#22FFFFFF" />
+            
+        </LinearLayout>
+        
+        <!-- ════════════════════════════════════════════════════════════ -->
+        <!-- TAB 3: SETTINGS - Gelişmiş Ayarlar -->
+        <!-- ════════════════════════════════════════════════════════════ -->
+        
+        <LinearLayout
+            android:id="@+id/panel_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚙️ GELİŞMİŞ AYARLAR"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#10B981"
+                android:paddingBottom="12dp" />
+            
+            <!-- MAX SLOTS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="12dp">
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Max Slot Sayısı:"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF" />
+                
+                <Button
+                    android:id="@+id/btn_max_slots_minus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="−"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:background="#DD374151" />
+                
+                <TextView
+                    android:id="@+id/tv_max_slots"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:textSize="16sp"
+                    android:textColor="#10B981"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+                
+                <Button
+                    android:id="@+id/btn_max_slots_plus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:background="#DD10B981" />
+            </LinearLayout>
+            
+            <!-- SCAN INTERVAL -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="12dp">
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tarama Aralığı (sn):"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF" />
+                
+                <Button
+                    android:id="@+id/btn_interval_minus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="−"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:background="#DD374151" />
+                
+                <TextView
+                    android:id="@+id/tv_interval"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="16sp"
+                    android:textColor="#10B981"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+                
+                <Button
+                    android:id="@+id/btn_interval_plus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:background="#DD10B981" />
+            </LinearLayout>
+            
+            <!-- TIME RANGE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saat Aralığı:"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:paddingTop="8dp"
+                android:paddingBottom="6dp" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="12dp">
+                
+                <TextView
+                    android:id="@+id/tv_time_start"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="11:00"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFF"
+                    android:background="#DD374151"
+                    android:gravity="center"
+                    android:layout_marginRight="8dp" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="→"
+                    android:textSize="16sp"
+                    android:textColor="#9CA3AF"
+                    android:layout_marginRight="8dp" />
+                
+                <TextView
+                    android:id="@+id/tv_time_end"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="23:00"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFF"
+                    android:background="#DD374151"
+                    android:gravity="center" />
+            </LinearLayout>
+            
+            <!-- AUTO REFRESH -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="12dp">
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Otomatik Yenileme:"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF" />
+                
+                <Button
+                    android:id="@+id/btn_toggle_refresh"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="✓ Açık"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:background="#DD10B981" />
+            </LinearLayout>
+            
+            <!-- TEST MODE -->
+            <Button
+                android:id="@+id/btn_test_mode"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🧪 TEST MODU"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#DD6366F1"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+            
+        </LinearLayout>
+        
+        <!-- ════════════════════════════════════════════════════════════ -->
+        <!-- BOTTOM CONTROLS (Always visible) -->
+        <!-- ════════════════════════════════════════════════════════════ -->
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#33FFFFFF"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+        
+        <!-- STATUS -->
+        <TextView
+            android:id="@+id/tv_status_advanced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏸ DURDURULDU"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#EF4444"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="#22FFFFFF"
+            android:layout_marginBottom="12dp" />
+        
+        <!-- STATISTICS -->
+        <TextView
+            android:id="@+id/tv_stats_advanced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tarama: 0 | Alev: 0 | Rezervasyon: 0 | Başarı: 0%"
+            android:textSize="10sp"
+            android:textColor="#9CA3AF"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+        
+        <!-- MAIN CONTROLS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <Button
+                android:id="@+id/btn_start_advanced"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="▶ BAŞLAT"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#DD10B981"
+                android:layout_marginRight="8dp" />
+            
+            <Button
+                android:id="@+id/btn_stop_advanced"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="■ DURDUR"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#DDEF4444" />
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+</ScrollView>
+
