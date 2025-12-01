@@ -715,15 +715,15 @@ export default function SocialMapPage() {
             style={{ height: '100%', width: '100%' }}
             ref={mapRef}
           >
-            {/* Harita Katmanı - OpenStreetMap (Ücretsiz) */}
+            {/* Harita Katmanı - Gece/Gündüz Modu */}
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | &copy; <a href="https://carto.com/">CARTO</a>'
               url={
                 mapStyle === 'standard'
                   ? "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  : "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
               }
-              subdomains={['a', 'b', 'c']}
+              subdomains={mapStyle === 'standard' ? ['a', 'b', 'c'] : ['a', 'b', 'c', 'd']}
               maxZoom={19}
             />
             

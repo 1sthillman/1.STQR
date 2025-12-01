@@ -50,6 +50,14 @@ export default function QRScanNew() {
   const startScanner = async () => {
     if (!html5QrCode.current || scanning) return;
 
+    // GitHub Pages HTTPS kontrolü
+    if (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      setToast({ 
+        message: '⚠️ Kamera erişimi için HTTPS gerekli. GitHub Pages otomatik HTTPS kullanır.', 
+        type: 'warning' 
+      });
+    }
+
     console.log('🚀 Scanner başlatılıyor...');
     setScanning(true);
 
@@ -60,6 +68,11 @@ export default function QRScanNew() {
           fps: 30, // ⚡ MAKSİMUM FPS!
           qrbox: { width: 250, height: 250 }, // Odak alanı
           aspectRatio: 1.0,
+          videoConstraints: {
+            facingMode: 'environment',
+            width: { ideal: 1280 },
+            height: { ideal: 720 }
+          }
         },
         (decodedText, decodedResult) => {
           // ⚡ ANINDA İŞLE!
@@ -75,8 +88,9 @@ export default function QRScanNew() {
 
           console.log('🎉 OKUMA:', decodedText);
           
-          // Ses efekti
-          const audio = new Audio('/casual-click-pop-ui-2-262119.mp3');
+          // Ses efekti - Base path desteği
+          const basePath = (window as any).__BASE_PATH__ || '';
+          const audio = new Audio(`${basePath}casual-click-pop-ui-2-262119.mp3`);
           audio.play().catch(() => {});
 
           // İşle

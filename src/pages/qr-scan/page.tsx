@@ -179,6 +179,14 @@ export default function QRScanNew() {
   const startScanner = async () => {
     if (!html5QrCode.current || scanning) return;
 
+    // GitHub Pages HTTPS kontrolü
+    if (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      setToast({ 
+        message: '⚠️ Kamera erişimi için HTTPS gerekli. GitHub Pages otomatik HTTPS kullanır.', 
+        type: 'warning' 
+      });
+    }
+
     console.log('🚀 Scanner başlatılıyor...');
     setScanning(true);
     processingLock.current = false;
@@ -200,7 +208,9 @@ export default function QRScanNew() {
           aspectRatio: 1.0,
           disableFlip: false,
           videoConstraints: {
-            facingMode: cameraFacing
+            facingMode: cameraFacing,
+            width: { ideal: 1280 },
+            height: { ideal: 720 }
           }
         },
         (decodedText, decodedResult) => {
@@ -245,8 +255,9 @@ export default function QRScanNew() {
           // 📱 TELEFON FLAŞI
           blinkPhoneFlash();
           
-          // 🔊 SES EFEKTİ
-          const audio = new Audio('/casual-click-pop-ui-2-262119.mp3');
+          // 🔊 SES EFEKTİ - Base path desteği
+          const basePath = (window as any).__BASE_PATH__ || '';
+          const audio = new Audio(`${basePath}casual-click-pop-ui-2-262119.mp3`);
           audio.play().catch(() => {});
 
           // 📦 İŞLE - İşlem bitene kadar lock açılmayacak
