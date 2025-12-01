@@ -38,9 +38,11 @@ debug.keystore
 *.temp
 *.bak
 
-# Media files (large)
+# Media files (large) - but keep public assets
 *.mp4
+!public/*.mp4
 *.mp3
+!public/*.mp3
 *.jpg
 *.png
 *.webp
