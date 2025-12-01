@@ -52,6 +52,16 @@ debug.keystore
 # Source code backups
 *-complete-source-*.txt
 
+# Root level media files (duplicates of public/)
+splash.mp4
+casual-click-pop-ui-2-262119.mp3
+tap-notification-180637.mp3
+
+# Temporary analysis files
+all_files.txt
+tracked_files.txt
+missing_files.txt
+
 # Android build
 android/app/build/
 android/build/
