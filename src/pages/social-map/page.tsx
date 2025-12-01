@@ -715,15 +715,16 @@ export default function SocialMapPage() {
             style={{ height: '100%', width: '100%' }}
             ref={mapRef}
           >
-            {/* Harita Katmanı - Dinamik */}
+            {/* Harita Katmanı - OpenStreetMap (Ücretsiz) */}
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url={
                 mapStyle === 'standard'
-                  ? "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
-                  : "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+                  ? "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               }
-              maxZoom={20}
+              subdomains={['a', 'b', 'c']}
+              maxZoom={19}
             />
             
             {/* Kullanıcı Konumu */}

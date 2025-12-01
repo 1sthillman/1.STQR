@@ -23,7 +23,9 @@ const SplashVideo = ({ onComplete, videoSrc = 'splash.mp4' }: SplashVideoProps) 
     if (Capacitor.isNativePlatform()) {
       videoPath = `${window.location.origin}/${videoSrc}`;
     } else {
-      videoPath = `/${videoSrc}`;
+      // GitHub Pages için base path desteği
+      const basePath = (window as any).__BASE_PATH__ || '';
+      videoPath = `${basePath}${videoSrc}`;
     }
     
     // Video elementini hazırla
